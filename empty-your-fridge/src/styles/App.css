@@ -16,18 +16,10 @@ body {
 }
 
 .App-header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
 }
 
 .container {
   display: flex;
-}
-
-/*Ingredients style*/
-.ingredients-container {
-  display: flex;
-  max-width: 200px;
-  position: relative;
-  top: 80px;
-  left: 20px;
 }
