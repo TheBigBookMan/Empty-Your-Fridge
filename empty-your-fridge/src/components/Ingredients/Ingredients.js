@@ -3,9 +3,9 @@
 
 // apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${queryIngredients}&app_id=${api_id}&app_key=${api_key}${health}${cuisine}${meal}`
 import React from "react";
-import { cuisines, meals, health } from "../utils/types";
-import "../styles/Ingredients.css";
-import { ingredientsStyles as style } from "../styles/Ingredients";
+import { cuisines, meals, health } from "../../utils/types";
+import "./styles/Ingredients.css";
+import { ingredientsStyles as style } from "./styles/IngredientsStyles";
 
 const Ingredients = () => {
   return (
