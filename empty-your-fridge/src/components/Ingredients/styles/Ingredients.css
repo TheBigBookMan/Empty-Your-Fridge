@@ -12,4 +12,15 @@
 .ingredient-btn {
   width: 60px;
   height: 30px;
+  border-radius: 20px;
+}
+
+.ingredient-btn:active {
+  transform: scale(0.98);
+  background-color: rgb(197, 184, 184);
+}
+
+.ingredient-btn:hover {
+  cursor: pointer;
+  background-color: rgba(237, 214, 214, 0.999);
 }

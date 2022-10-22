@@ -1,7 +1,7 @@
 export const bowlStyles = {
   bowlContainer: {
     border: "black solid 2px",
-    maxHeight: "150px",
+    maxHeight: "200px",
     width: "800px",
     fontSize: "1.3rem",
     marginTop: "15px",
@@ -13,7 +13,7 @@ export const bowlStyles = {
     flexWrap: "wrap",
     gap: "10px",
     fontWeight: "bolder",
-    maxHeight: "150px",
+    maxHeight: "200px",
     width: "800px",
   },
   ingredient: {

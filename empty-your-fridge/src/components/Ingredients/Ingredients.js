@@ -2,14 +2,27 @@
 // var api_key = '3825b049c21e45afc20c029947cc4427'
 
 // apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${queryIngredients}&app_id=${api_id}&app_key=${api_key}${health}${cuisine}${meal}`
-import React from "react";
+import React, { useState } from "react";
 import { cuisines, meals, health } from "../../utils/types";
 import "./styles/Ingredients.css";
 import { ingredientsStyles as style } from "./styles/IngredientsStyles";
 
-const Ingredients = () => {
+const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
   // MIGHT NEED STATE FOR THE INGREDIENT ENTER SAVED TO THEN SHOW IN THE BOWL
   // PASS THE STATE AS A PROP TO THE BOWL COMPONENT
+  const [newIngredientInput, setNewIngredientInput] = useState("");
+
+  const handleInputChange = (e) => {
+    e.preventDefault();
+    setIngredientsArr([...ingredientsArr, newIngredientInput]);
+  };
+
+  const handleIngredientInput = (e) => {
+    const { target } = e;
+    const inputValue = target.value;
+    setNewIngredientInput(inputValue);
+  };
+
   return (
     <div style={style.ingredientsContainer}>
       <h3>
@@ -18,14 +31,23 @@ const Ingredients = () => {
         recipes that match your criteria!
       </h3>
       <form style={style.formContainer}>
-        <input
-          type="text"
-          style={style.ingredientInput}
-          placeholder="Ingredients"
-        />
-        <button type="submit" className="ingredient-btn">
-          Add
-        </button>
+        <form>
+          <input
+            type="text"
+            style={style.ingredientInput}
+            placeholder="Ingredients"
+            onChange={handleIngredientInput}
+            value={newIngredientInput}
+          />
+          <button
+            onClick={handleInputChange}
+            type="submit"
+            className="ingredient-btn"
+          >
+            <strong>Add</strong>
+          </button>
+        </form>
+
         <select style={style.cuisineInput}>
           <option value="" selected disabled hidden>
             Cuisine type
