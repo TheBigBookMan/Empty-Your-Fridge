@@ -13,9 +13,9 @@ const Ingredients = () => {
   return (
     <div style={style.ingredientsContainer}>
       <h3>
-        Type in ingredients you have laying about, one by one to then receive a
-        list of yummy recipes that you can make with them. It's time to empty
-        your fridge!
+        Type in the ingredients and click "Add" to enter your ingredients to the
+        list. When ready, click on "Search Recipes" to view all the yummy
+        recipes that match your criteria!
       </h3>
       <form style={style.formContainer}>
         <input
@@ -23,6 +23,9 @@ const Ingredients = () => {
           style={style.ingredientInput}
           placeholder="Ingredients"
         />
+        <button type="submit" className="ingredient-btn">
+          Add
+        </button>
         <select style={style.cuisineInput}>
           <option value="" selected disabled hidden>
             Cuisine type

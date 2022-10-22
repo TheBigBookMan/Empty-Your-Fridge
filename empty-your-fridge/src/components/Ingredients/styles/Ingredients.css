@@ -6,4 +6,10 @@
 
 .submit-input:hover {
   cursor: pointer;
+  background-color: rgba(237, 214, 214, 0.999);
+}
+
+.ingredient-btn {
+  width: 60px;
+  height: 30px;
 }

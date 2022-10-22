@@ -2,9 +2,9 @@ export const ingredientsStyles = {
   ingredientsContainer: {
     display: "flex",
     flexDirection: "column",
-    maxWidth: "200px",
+    maxWidth: "250px",
     position: "relative",
-    top: "60px",
+    top: "20px",
     left: "50px",
     fontFamily: "mukta",
     letterSpacing: "2px",
