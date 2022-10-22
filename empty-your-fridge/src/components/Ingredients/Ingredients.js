@@ -8,6 +8,8 @@ import "./styles/Ingredients.css";
 import { ingredientsStyles as style } from "./styles/IngredientsStyles";
 
 const Ingredients = () => {
+  // MIGHT NEED STATE FOR THE INGREDIENT ENTER SAVED TO THEN SHOW IN THE BOWL
+  // PASS THE STATE AS A PROP TO THE BOWL COMPONENT
   return (
     <div style={style.ingredientsContainer}>
       <h3>
