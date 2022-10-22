@@ -9,10 +9,6 @@ import History from "./components/History/History";
 function App() {
   const [ingredientsArr, setIngredientsArr] = useState([]);
 
-  // const userAddIngredient = (addedIngredient) => {
-  //   setIngredientsArr([...ingredientsArr, addedIngredient]);
-  // };
-
   return (
     <div>
       <header className="App-header">
@@ -24,7 +20,7 @@ function App() {
           ingredientsArr={ingredientsArr}
         />
         <div className="middle-container">
-          <Bowl />
+          <Bowl ingredientsArr={ingredientsArr} />
           <Recipes />
         </div>
         <div className="right-container">

@@ -1,4 +1,5 @@
 export const cuisines = [
+  "Select Cuisine",
   "Any",
   "American",
   "Asian",
@@ -20,9 +21,17 @@ export const cuisines = [
   "South East Asian",
 ];
 
-export const meals = ["Any", "Breakfast", "Lunch", "Dinner", "Snack"];
+export const meals = [
+  "Meal type",
+  "Any",
+  "Breakfast",
+  "Lunch",
+  "Dinner",
+  "Snack",
+];
 
 export const health = [
+  "Health type",
   "Any",
   "Alcohol-cocktail",
   "Alcohol-free",
