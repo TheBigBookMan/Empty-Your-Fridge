@@ -6,9 +6,9 @@ import apiQuery from "../../utils/API";
 
 const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
   const [newIngredientInput, setNewIngredientInput] = useState("");
-  const [healthSelection, setHealthSelection] = useState("");
   const [cuisineSelection, setCuisineSelection] = useState("");
   const [mealSelection, setMealSelection] = useState("");
+  const [healthSelection, setHealthSelection] = useState("");
 
   //TODO  get props of the array that holds the values of the cuisine/meal/health type and add the values from the user selection into it
 
@@ -26,6 +26,24 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
     const { target } = e;
     const inputValue = target.value;
     setNewIngredientInput(inputValue);
+  };
+
+  const changeCuisine = (e) => {
+    const { target } = e;
+    const selectValue = target.value;
+    setCuisineSelection(selectValue);
+  };
+
+  const changeMeal = (e) => {
+    const { target } = e;
+    const selectValue = target.value;
+    setMealSelection(selectValue);
+  };
+
+  const changeHealth = (e) => {
+    const { target } = e;
+    const selectValue = target.value;
+    setHealthSelection(selectValue);
   };
 
   return (
@@ -51,7 +69,7 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
           <strong>Add</strong>
         </button>
 
-        <select style={style.cuisineInput}>
+        <select style={style.cuisineInput} onChange={changeCuisine}>
           <option
             value="Cuisine type"
             defaultValue="Cuisine type"
@@ -65,7 +83,7 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
           ))}
         </select>
 
-        <select style={style.mealInput}>
+        <select style={style.mealInput} onChange={changeMeal}>
           <option value="Meal type" defaultValue="Meal type" disabled hidden>
             Meal type
           </option>
@@ -74,7 +92,7 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
           ))}
         </select>
 
-        <select style={style.healthType}>
+        <select style={style.healthType} onChange={changeHealth}>
           <option
             value="Health type"
             defaultValue="Health type"
