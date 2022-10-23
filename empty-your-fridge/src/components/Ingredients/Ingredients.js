@@ -10,6 +10,8 @@ import { ingredientsStyles as style } from "./styles/IngredientsStyles";
 const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
   const [newIngredientInput, setNewIngredientInput] = useState("");
 
+  //TODO  get props of the array that holds the values of the cuisine/meal/health type and add the values from the user selection into it
+
   const handleInputChange = (e) => {
     e.preventDefault();
     setIngredientsArr([...ingredientsArr, newIngredientInput.toLowerCase()]);
@@ -25,7 +27,7 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
   return (
     <div style={style.ingredientsContainer}>
       <h3>
-        Type in the ingredients and click "Add" to enter your ingredients to the
+        Type in the ingredient and click "Add" to enter your ingredient to the
         list. When ready, click on "Search Recipes" to view all the yummy
         recipes that match your criteria!
       </h3>
