@@ -9,7 +9,7 @@ const Bowl = ({ ingredientsArr }) => {
         {ingredientsArr.map((ingredient, index) => (
           <li style={bowl.ingredient} key={index}>
             <p style={bowl.ingredientName}>{ingredient.toLowerCase()}</p>{" "}
-            <i class="fa-regular fa-circle-xmark"></i>
+            <i className="fa-regular fa-circle-xmark"></i>
           </li>
         ))}
       </ul>

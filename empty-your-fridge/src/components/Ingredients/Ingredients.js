@@ -12,8 +12,15 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
 
   //TODO  get props of the array that holds the values of the cuisine/meal/health type and add the values from the user selection into it
 
-  const createApiCall = () => {
-    apiQuery(ingredientsArr, healthSelection, cuisineSelection, mealSelection);
+  const createApiCall = (e) => {
+    e.preventDefault();
+    console.log(
+      ingredientsArr,
+      healthSelection,
+      cuisineSelection,
+      mealSelection
+    );
+    // apiQuery(ingredientsArr, healthSelection, cuisineSelection, mealSelection);
   };
 
   const handleInputChange = (e) => {
@@ -22,24 +29,27 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
     setNewIngredientInput("");
   };
 
+  //! NEED TO MAKE SURE THAT USERS CANT INPUT EMPTY ""
   const handleIngredientInput = (e) => {
     const { target } = e;
     const inputValue = target.value;
+
     setNewIngredientInput(inputValue);
   };
 
+  //TODO make sure they cant select the default
   const changeCuisine = (e) => {
     const { target } = e;
     const selectValue = target.value;
     setCuisineSelection(selectValue);
   };
-
+  //TODO make sure they cant select the default
   const changeMeal = (e) => {
     const { target } = e;
     const selectValue = target.value;
     setMealSelection(selectValue);
   };
-
+  //TODO make sure they cant select the default
   const changeHealth = (e) => {
     const { target } = e;
     const selectValue = target.value;
@@ -110,6 +120,7 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
           style={style.submitInput}
           type="submit"
           className="submit-input"
+          onClick={createApiCall}
         >
           Search recipes
         </button>
