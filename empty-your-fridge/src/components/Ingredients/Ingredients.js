@@ -1,16 +1,20 @@
-//* var api_id = '215db5b9'
-//* var api_key = '3825b049c21e45afc20c029947cc4427'
-//* apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${queryIngredients}&app_id=${api_id}&app_key=${api_key}${health}${cuisine}${meal}`
-
 import React, { useState } from "react";
 import { cuisines, meals, health } from "../../utils/types";
 import "./styles/Ingredients.css";
 import { ingredientsStyles as style } from "./styles/IngredientsStyles";
+import apiQuery from "../../utils/API";
 
 const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
   const [newIngredientInput, setNewIngredientInput] = useState("");
+  const [healthSelection, setHealthSelection] = useState("");
+  const [cuisineSelection, setCuisineSelection] = useState("");
+  const [mealSelection, setMealSelection] = useState("");
 
   //TODO  get props of the array that holds the values of the cuisine/meal/health type and add the values from the user selection into it
+
+  const createApiCall = () => {
+    apiQuery(ingredientsArr, healthSelection, cuisineSelection, mealSelection);
+  };
 
   const handleInputChange = (e) => {
     e.preventDefault();
