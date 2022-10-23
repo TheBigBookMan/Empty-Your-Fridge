@@ -18,7 +18,12 @@ const apiQuery = async (queryIngredients, health, cuisine, meal) => {
   ingredientSelection = ingredientSelection.join("");
 
   // TODO update the health variable to '&health={health}' and if no input then ""
-
+  if (health === "" || health === "Any") {
+    health = "";
+  } else {
+    health = `&health=${health}`;
+  }
+  console.log(health);
   // TODO update the cuisine variable to '&cuisineType={cuisine}' and if no input then ""
 
   // TODO update the meal variable to '&mealType={meal}' and if no input then ""
