@@ -13,6 +13,9 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
   //TODO  get props of the array that holds the values of the cuisine/meal/health type and add the values from the user selection into it
 
   const createApiCall = (e) => {
+    // ? need to make the api call like this with the queries so need if/else statements
+    //? https://api.edamam.com/api/recipes/v2?type=public&q=chicken%2C%20lettuce%2C%20tomato%2C%20cheese&app_id=215db5b9&app_key=3825b049c21e45afc20c029947cc4427&health=vegetarian&cuisineType=Nordic&mealType=Snack
+
     e.preventDefault();
     console.log(
       ingredientsArr,
@@ -20,7 +23,7 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
       cuisineSelection,
       mealSelection
     );
-    // apiQuery(ingredientsArr, healthSelection, cuisineSelection, mealSelection);
+    apiQuery(ingredientsArr, healthSelection, cuisineSelection, mealSelection);
   };
 
   const handleInputChange = (e) => {
