@@ -13,12 +13,12 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
   const createApiCall = (e) => {
     e.preventDefault();
 
-    console.log(
-      ingredientsArr,
-      healthSelection,
-      cuisineSelection,
-      mealSelection
-    );
+    // console.log(
+    //   ingredientsArr,
+    //   healthSelection,
+    //   cuisineSelection,
+    //   mealSelection
+    // );
     apiQuery(ingredientsArr, healthSelection, cuisineSelection, mealSelection);
   };
 
@@ -36,19 +36,18 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
     setNewIngredientInput(inputValue);
   };
 
-  //TODO make sure they cant select the default
   const changeCuisine = (e) => {
     const { target } = e;
     const selectValue = target.value;
     setCuisineSelection(selectValue);
   };
-  //TODO make sure they cant select the default
+
   const changeMeal = (e) => {
     const { target } = e;
     const selectValue = target.value;
     setMealSelection(selectValue);
   };
-  //TODO make sure they cant select the default
+
   const changeHealth = (e) => {
     const { target } = e;
     const selectValue = target.value;

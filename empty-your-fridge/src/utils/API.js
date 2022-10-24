@@ -41,6 +41,12 @@ const mealCheck = (input) => {
   }
 };
 
+// TODO need to make the ingredients MAX to be equal the length of ingredient array because then the recipes have extra ingredients that weren't put in by the user which defeats the whole purpose of it
+
+const ingredientAmount = (arr) => {
+  return `&ingr=${arr.length}`;
+};
+
 const apiQuery = async (queryIngredients, health, cuisine, meal) => {
   // ? need to make the api call like this with the queries so need if/else statements
   //? https://api.edamam.com/api/recipes/v2?type=public&q=lettuce%chicken%tomato%cheese&app_id=215db5b9&app_key=3825b049c21e45afc20c029947cc4427&health=alcohol-free&cuisineType=British&mealType=Lunch
@@ -49,10 +55,11 @@ const apiQuery = async (queryIngredients, health, cuisine, meal) => {
     queryIngredients
   )}&app_id=${api_id}&app_key=${api_key}${healthCheck(health)}${cuisineCheck(
     cuisine
-  )}${mealCheck(meal)}`;
+  )}${mealCheck(meal)}${ingredientAmount(queryIngredients)}`;
   console.log(apiUrl);
-  // const response = await axios.get(apiUrl);
-  // console.log(response);
+  const response = await axios.get(apiUrl);
+  const recipesResponse = response.data.hits;
+  console.log(recipesResponse);
 };
 
 export default apiQuery;
