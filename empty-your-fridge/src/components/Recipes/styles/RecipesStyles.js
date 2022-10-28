@@ -7,4 +7,26 @@ export const recipeStyles = {
     borderRadius: "10px",
     padding: "15px",
   },
+  recipesBox: {
+    border: "solid black 2px",
+    width: "100%",
+    height: "80%",
+    overflowY: "scroll",
+    display: "flex",
+    flexWrap: "wrap",
+    // gap: "15px",
+  },
+  recipe: {
+    margin: "5px",
+    border: "solid 2px black",
+    width: "180px",
+    height: "150px",
+  },
+  link: {
+    wordWrap: "break-word",
+  },
+  pic: {
+    width: "180px",
+    height: "105px",
+  },
 };
