@@ -4,7 +4,7 @@ export const favouritesStyles = {
     backgroundColor: "#fff",
     borderRadius: "10px",
     width: "280px",
-    height: "350px",
+    height: "600px",
   },
   favouritesHeader: {
     paddingTop: "7px",

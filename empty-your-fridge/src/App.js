@@ -4,7 +4,6 @@ import Ingredients from "./components/Ingredients/Ingredients";
 import Bowl from "./components/Bowl/Bowl";
 import Recipes from "./components/Recipes/Recipes";
 import Favourites from "./components/Favourites/Favourites";
-import History from "./components/History/History";
 
 function App() {
   const [ingredientsArr, setIngredientsArr] = useState([]);
@@ -30,7 +29,6 @@ function App() {
         </div>
         <div className="right-container">
           <Favourites />
-          <History />
         </div>
       </body>
     </div>
