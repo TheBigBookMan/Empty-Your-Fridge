@@ -5,6 +5,10 @@ export const bowlStyles = {
     width: "800px",
     fontSize: "1.3rem",
     marginTop: "15px",
+    boxShadow: "1px 1px 8px 1px rgba(0, 0, 0, 0.4)",
+    backgroundColor: "#fff",
+    borderRadius: "10px",
+    padding: "15px",
   },
   bowlList: {
     listStyleType: "none",
@@ -19,6 +23,15 @@ export const bowlStyles = {
   ingredient: {
     display: "flex",
     maxWidth: "auto",
+    height: "30px",
+    border: "solid 2px gray",
+    fontFamily: "Mukta",
+    letterSpacing: "2px",
+    boxShadow: "1px 1px 2px 1px rgba(0, 0, 0, 0.6)",
+    backgroundColor: "#fff",
+    borderRadius: "10px",
+    paddingLeft: "10px",
+    paddingTop: "2px",
   },
   ingredientName: {
     marginRight: "5px",
