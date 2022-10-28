@@ -3,7 +3,7 @@ export const ingredientsStyles = {
     display: "flex",
     flexDirection: "column",
     maxWidth: "250px",
-    position: "relative",
+    marginLeft: "25px",
     top: "10px",
     left: "40px",
     fontFamily: "Mukta",

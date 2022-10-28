@@ -1,6 +1,5 @@
 export const bowlStyles = {
   bowlContainer: {
-    border: "black solid 2px",
     maxHeight: "200px",
     width: "800px",
     fontSize: "1.3rem",
