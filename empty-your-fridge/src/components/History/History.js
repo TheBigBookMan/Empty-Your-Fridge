@@ -4,7 +4,7 @@ import { historyStyles as history } from "./styles/HistoryStyles";
 const History = () => {
   return (
     <div style={history.historyContainer}>
-      <h2>History</h2>
+      <h2 style={history.historyHeader}>History</h2>
     </div>
   );
 };

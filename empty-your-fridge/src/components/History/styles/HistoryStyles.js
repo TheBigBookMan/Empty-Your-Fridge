@@ -7,4 +7,8 @@ export const historyStyles = {
     height: "220px",
     marginTop: "20px",
   },
+  historyHeader: {
+    paddingTop: "7px",
+    paddingLeft: "10px",
+  },
 };

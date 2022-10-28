@@ -6,4 +6,8 @@ export const favouritesStyles = {
     width: "280px",
     height: "350px",
   },
+  favouritesHeader: {
+    paddingTop: "7px",
+    paddingLeft: "10px",
+  },
 };
