@@ -8,12 +8,12 @@ export const recipeStyles = {
     padding: "15px",
   },
   recipesBox: {
-    border: "solid black 2px",
     width: "100%",
     height: "80%",
     overflowY: "scroll",
     display: "flex",
     flexWrap: "wrap",
+    // boxShadow: "1px 1px 8px 1px rgba(0, 0, 0, 0.4)",
     // gap: "15px",
   },
   recipe: {

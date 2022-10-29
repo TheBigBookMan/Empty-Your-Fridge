@@ -59,10 +59,14 @@ const apiQuery = async (queryIngredients, health, cuisine, meal) => {
   const response = await axios.get(apiUrl);
   const recipesResponse = response.data.hits;
   //? get from api- label, url, image(maybe small or thumbnail-have to check)
-  const recipeInfo = recipesResponse.map((recipe) => recipe.recipe);
-  // recipe.recipe.label,
-  // recipe.recipe.images.SMALL.url,
-  // recipe.recipe.url,
+  const recipeInfo = recipesResponse.map((recipe) => {
+    return [
+      recipe.recipe.label,
+      recipe.recipe.images.SMALL.url,
+      recipe.recipe.url,
+    ];
+  });
+
   return recipeInfo;
 };
 
