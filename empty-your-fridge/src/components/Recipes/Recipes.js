@@ -8,6 +8,8 @@ import pic from "./pic.png";
 
 //TODO have props passed of the array with user criteria and then arrange so fits in API call
 
+// TODO add in a favourites button from fontawesome with the love heart
+
 const Recipes = () => {
   return (
     <div style={recipes.recipesContainer}>
@@ -15,37 +17,9 @@ const Recipes = () => {
       <div style={recipes.recipesBox}>
         <div style={recipes.recipe}>
           <h5>Chicken wrap</h5>
-          <p style={recipes.link}>Link</p>
-          <img style={recipes.pic} src={pic} alt=" " />
-        </div>
-        <div style={recipes.recipe}>
-          <h5>Chicken wrap</h5>
-          <p style={recipes.link}>Link</p>
-          <img style={recipes.pic} src={pic} alt=" " />
-        </div>
-        <div style={recipes.recipe}>
-          <h5>Chicken wrap</h5>
-          <p style={recipes.link}>Link</p>
-          <img style={recipes.pic} src={pic} alt=" " />
-        </div>
-        <div style={recipes.recipe}>
-          <h5>Chicken wrap</h5>
-          <p style={recipes.link}>Link</p>
-          <img style={recipes.pic} src={pic} alt=" " />
-        </div>
-        <div style={recipes.recipe}>
-          <h5>Chicken wrap</h5>
-          <p style={recipes.link}>Link</p>
-          <img style={recipes.pic} src={pic} alt=" " />
-        </div>
-        <div style={recipes.recipe}>
-          <h5>Chicken wrap</h5>
-          <p style={recipes.link}>Link</p>
-          <img style={recipes.pic} src={pic} alt=" " />
-        </div>
-        <div style={recipes.recipe}>
-          <h5>Chicken wrap</h5>
-          <p style={recipes.link}>Link</p>
+          <a href="#">
+            <p style={recipes.link}>Link</p>
+          </a>
           <img style={recipes.pic} src={pic} alt=" " />
         </div>
       </div>

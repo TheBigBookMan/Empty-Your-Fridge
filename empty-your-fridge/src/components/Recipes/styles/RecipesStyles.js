@@ -18,7 +18,9 @@ export const recipeStyles = {
   },
   recipe: {
     margin: "5px",
-    border: "solid 2px black",
+    boxShadow: "1px 1px 8px 1px rgba(0, 0, 0, 0.4)",
+    borderRadius: "10px",
+    padding: "3px",
     width: "180px",
     height: "150px",
   },
@@ -28,5 +30,6 @@ export const recipeStyles = {
   pic: {
     width: "180px",
     height: "105px",
+    borderRadius: "5px",
   },
 };
