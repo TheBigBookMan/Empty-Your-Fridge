@@ -10,7 +10,7 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
   const [mealSelection, setMealSelection] = useState("");
   const [healthSelection, setHealthSelection] = useState("");
 
-  const createApiCall = (e) => {
+  const createApiCall = async (e) => {
     e.preventDefault();
 
     // console.log(
@@ -19,7 +19,14 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
     //   cuisineSelection,
     //   mealSelection
     // );
-    apiQuery(ingredientsArr, healthSelection, cuisineSelection, mealSelection);
+    const getRecipes = await apiQuery(
+      ingredientsArr,
+      healthSelection,
+      cuisineSelection,
+      mealSelection
+    );
+
+    console.log(getRecipes);
   };
 
   const handleInputChange = (e) => {

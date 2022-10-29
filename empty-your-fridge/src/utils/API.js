@@ -56,10 +56,16 @@ const apiQuery = async (queryIngredients, health, cuisine, meal) => {
   )}&app_id=${api_id}&app_key=${api_key}${healthCheck(health)}${cuisineCheck(
     cuisine
   )}${mealCheck(meal)}${ingredientAmount(queryIngredients)}`;
-  console.log(apiUrl);
   const response = await axios.get(apiUrl);
   const recipesResponse = response.data.hits;
-  console.log(recipesResponse);
+  //? get from api- label, url, image(maybe small or thumbnail-have to check)
+  const recipeInfo = recipesResponse.map((recipe) => [
+    recipe.recipe.label,
+    recipe.recipe.images.SMALL.url,
+    recipe.recipe.url,
+  ]);
+
+  return recipeInfo;
 };
 
 export default apiQuery;
