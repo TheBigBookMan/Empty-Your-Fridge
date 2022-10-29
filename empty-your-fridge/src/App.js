@@ -28,7 +28,7 @@ function App() {
         />
         <div className="middle-container">
           <Bowl ingredientsArr={ingredientsArr} />
-          <Recipes />
+          <Recipes recipesInfoArr={recipesInfoArr} />
         </div>
         <div className="right-container">
           <Favourites />

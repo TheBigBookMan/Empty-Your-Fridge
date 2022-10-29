@@ -4,13 +4,12 @@ import { recipeStyles as recipes } from "./styles/RecipesStyles";
 //! DELETE THIS
 import pic from "./pic.png";
 
-// TODO prop of ingredients and selection will be transferred to fetch call API
-
-//TODO have props passed of the array with user criteria and then arrange so fits in API call
+//TODO map the array of recipesInfoArr to create the li with all info
 
 // TODO add in a favourites button from fontawesome with the love heart
 
-const Recipes = () => {
+const Recipes = ({ recipesInfoArr }) => {
+  console.log(recipesInfoArr);
   return (
     <div style={recipes.recipesContainer}>
       <h2>Recipes</h2>

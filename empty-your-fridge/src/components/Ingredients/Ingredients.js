@@ -15,7 +15,7 @@ const Ingredients = ({
   const [mealSelection, setMealSelection] = useState("");
   const [healthSelection, setHealthSelection] = useState("");
 
-  console.log(recipesInfoArr);
+  // console.log(recipesInfoArr);
 
   const createApiCall = async (e) => {
     e.preventDefault();
@@ -25,19 +25,7 @@ const Ingredients = ({
       cuisineSelection,
       mealSelection
     );
-    console.log(getRecipes);
-    //! GETTING ARRAY OF RECIPE INFO INTO STATE ARRAY NOT WORKING
-    console.log(recipesInfoArr);
     setRecipesInfoArr([...recipesInfoArr, getRecipes]);
-
-    // const testArray = getRecipes.map((recipe) => {
-    //   console.log(recipesInfoArr);
-    //   setRecipesInfoArr((recipesInfoArr) => [...recipesInfoArr, recipe]);
-    //   console.log(recipesInfoArr);
-    // });
-
-    // setRecipesInfoArr((recipesInfoArr) => [...recipesInfoArr, getRecipes]);
-    console.log(recipesInfoArr);
   };
 
   const handleInputChange = (e) => {
