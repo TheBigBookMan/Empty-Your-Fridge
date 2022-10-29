@@ -18,7 +18,7 @@ function App() {
       <header className="App-header">
         <h1>Empty Your Fridge</h1>
       </header>
-      <body className="container">
+      <main className="container">
         <Ingredients
           setIngredientsArr={setIngredientsArr}
           ingredientsArr={ingredientsArr}
@@ -30,7 +30,7 @@ function App() {
         <div className="right-container">
           <Favourites />
         </div>
-      </body>
+      </main>
     </div>
   );
 }
