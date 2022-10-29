@@ -60,11 +60,13 @@ const apiQuery = async (queryIngredients, health, cuisine, meal) => {
   const recipesResponse = response.data.hits;
   //? get from api- label, url, image(maybe small or thumbnail-have to check)
   const recipeInfo = recipesResponse.map((recipe) => {
-    return [
-      recipe.recipe.label,
-      recipe.recipe.images.SMALL.url,
-      recipe.recipe.url,
-    ];
+    return recipe.recipe;
+    //   {
+    //     label: recipe.recipe.label,
+    //     image: recipe.recipe.images.SMALL.url,
+    //     url: recipe.recipe.url,
+    //   },
+    // ];
   });
 
   return recipeInfo;
