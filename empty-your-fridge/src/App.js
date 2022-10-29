@@ -7,6 +7,7 @@ import Favourites from "./components/Favourites/Favourites";
 
 function App() {
   const [ingredientsArr, setIngredientsArr] = useState([]);
+  const [recipesInfoArr, setRecipesInfoArr] = useState([]);
 
   //TODO ingredientsArr needs to be passed into the Recipes component where it can be added to local storage and searched in the fetch call
 
@@ -22,6 +23,8 @@ function App() {
         <Ingredients
           setIngredientsArr={setIngredientsArr}
           ingredientsArr={ingredientsArr}
+          recipesInfoArr={recipesInfoArr}
+          setRecipesInfoArr={setRecipesInfoArr}
         />
         <div className="middle-container">
           <Bowl ingredientsArr={ingredientsArr} />

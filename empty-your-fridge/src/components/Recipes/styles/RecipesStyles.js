@@ -26,7 +26,6 @@ export const recipeStyles = {
   },
   link: {
     wordWrap: "break-word",
-    border: "solid 2px black",
     width: "50px",
   },
   pic: {

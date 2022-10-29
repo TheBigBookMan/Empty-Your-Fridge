@@ -4,7 +4,12 @@ import "./styles/Ingredients.css";
 import { ingredientsStyles as style } from "./styles/IngredientsStyles";
 import apiQuery from "../../utils/API";
 
-const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
+const Ingredients = ({
+  setIngredientsArr,
+  ingredientsArr,
+  recipesInfoArr,
+  setRecipesInfoArr,
+}) => {
   const [newIngredientInput, setNewIngredientInput] = useState("");
   const [cuisineSelection, setCuisineSelection] = useState("");
   const [mealSelection, setMealSelection] = useState("");
@@ -12,21 +17,16 @@ const Ingredients = ({ setIngredientsArr, ingredientsArr }) => {
 
   const createApiCall = async (e) => {
     e.preventDefault();
-
-    // console.log(
-    //   ingredientsArr,
-    //   healthSelection,
-    //   cuisineSelection,
-    //   mealSelection
-    // );
     const getRecipes = await apiQuery(
       ingredientsArr,
       healthSelection,
       cuisineSelection,
       mealSelection
     );
-
     console.log(getRecipes);
+    //! GETTING ARRAY OF RECIPE INFO INTO STATE ARRAY NOT WORKING
+    setRecipesInfoArr((recipesInfoArr) => [...recipesInfoArr, getRecipes]);
+    console.log(recipesInfoArr);
   };
 
   const handleInputChange = (e) => {
