@@ -12,10 +12,9 @@ export const recipeStyles = {
     height: "80%",
     overflowY: "scroll",
     display: "flex",
-    justifyContent: "space-between",
     flexWrap: "wrap",
     // boxShadow: "1px 1px 8px 1px rgba(0, 0, 0, 0.4)",
-    // gap: "15px",
+    gap: "15px",
   },
   recipe: {
     margin: "5px",

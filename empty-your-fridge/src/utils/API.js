@@ -43,8 +43,10 @@ const mealCheck = (input) => {
 
 // TODO need to make the ingredients MAX to be equal the length of ingredient array because then the recipes have extra ingredients that weren't put in by the user which defeats the whole purpose of it
 
+// ? Not necessary because too restrictive of recipes back
 const ingredientAmount = (arr) => {
-  return `&ingr=${arr.length}`;
+  // return `&ingr=${arr.length}`;
+  return ``;
 };
 
 const apiQuery = async (queryIngredients, health, cuisine, meal) => {
@@ -61,12 +63,6 @@ const apiQuery = async (queryIngredients, health, cuisine, meal) => {
   //? get from api- label, url, image(maybe small or thumbnail-have to check)
   const recipeInfo = recipesResponse.map((recipe) => {
     return recipe.recipe;
-    //   {
-    //     label: recipe.recipe.label,
-    //     image: recipe.recipe.images.SMALL.url,
-    //     url: recipe.recipe.url,
-    //   },
-    // ];
   });
 
   return recipeInfo;
