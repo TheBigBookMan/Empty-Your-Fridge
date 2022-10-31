@@ -9,7 +9,7 @@ const Recipes = ({ recipesInfoArr }) => {
 
   const mappedRecipes = spreadRecipes.map((recipe) => (
     <li style={style.recipe}>
-      <h5>{recipe.label}</h5>
+      <h5 style={style.name}>{recipe.label}</h5>
       <p style={style.link}>
         <a href={`${recipe.url}`}>Link</a>
       </p>
