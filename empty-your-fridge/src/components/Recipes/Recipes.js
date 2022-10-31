@@ -7,15 +7,23 @@ const Recipes = ({ recipesInfoArr }) => {
   const spreadRecipes = recipesInfoArr[0];
   console.log(spreadRecipes);
 
-  const mappedRecipes = spreadRecipes.map((recipe) => (
-    <li style={style.recipe}>
-      <h5 style={style.name}>{recipe.label}</h5>
-      <p style={style.link}>
-        <a href={`${recipe.url}`}>Link</a>
-      </p>
-      <img style={style.pic} src={`${recipe.image}`} alt={`${recipe.label}`} />
-    </li>
-  ));
+  const mappedRecipes = !spreadRecipes
+    ? ""
+    : spreadRecipes.map((recipe) => (
+        <li style={style.recipe} key={recipe.label}>
+          <h5 style={style.name}>{recipe.label}</h5>
+          <p style={style.link}>
+            <a href={`${recipe.url}`} target="_blank">
+              Link
+            </a>
+          </p>
+          <img
+            style={style.pic}
+            src={`${recipe.image}`}
+            alt={`${recipe.label}`}
+          />
+        </li>
+      ));
 
   // TODO might have to do a map out of the actual return statement
   return (
