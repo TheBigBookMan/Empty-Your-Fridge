@@ -40,4 +40,10 @@ export const recipeStyles = {
     overflow: "hidden",
     whiteSpace: "nowrap",
   },
+  linkStar: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "155px",
+  },
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/recipeStyle.css";
 import { recipeStyles as style } from "./styles/RecipesStyles";
 
 // TODO add in a favourites button from fontawesome with the love heart
@@ -13,9 +14,12 @@ const Recipes = ({ recipesInfoArr }) => {
         <li style={style.recipe} key={recipe.label}>
           <h5 style={style.name}>{recipe.label}</h5>
           <p style={style.link}>
-            <a href={`${recipe.url}`} target="_blank">
-              Link
-            </a>
+            <div style={style.linkStar}>
+              <a href={`${recipe.url}`} target="_blank">
+                Link
+              </a>
+              <i style={style.star} className="fa-regular fa-star star"></i>
+            </div>
           </p>
           <img
             style={style.pic}
