@@ -8,8 +8,8 @@ const Bowl = ({ ingredientsArr }) => {
   return (
     <div style={bowl.bowlContainer}>
       <ul style={bowl.bowlList}>
-        {ingredientsArr.map((ingredient, index) => (
-          <li style={bowl.ingredient} key={index}>
+        {ingredientsArr.map((ingredient) => (
+          <li style={bowl.ingredient} key={ingredient}>
             <p style={bowl.ingredientName}>{ingredient.toLowerCase()}</p>{" "}
             <i className="fa-regular fa-circle-xmark"></i>
           </li>
