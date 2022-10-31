@@ -1,32 +1,31 @@
 import React from "react";
-import { recipeStyles as recipes } from "./styles/RecipesStyles";
-
-//TODO map the array of recipesInfoArr to create the li with all info
+import { recipeStyles as style } from "./styles/RecipesStyles";
 
 // TODO add in a favourites button from fontawesome with the love heart
 
 const Recipes = ({ recipesInfoArr }) => {
-  console.log(recipesInfoArr[0]);
   const spreadRecipes = recipesInfoArr[0];
+  console.log(spreadRecipes);
+
+  const mappedRecipes = spreadRecipes.map((recipe) => (
+    <li style={style.recipe}>
+      <h5>{recipe.label}</h5>
+      <p style={style.link}>
+        <a href={`${recipe.url}`}>Link</a>
+      </p>
+      <img style={style.pic} src={`${recipe.image}`} alt={`${recipe.label}`} />
+    </li>
+  ));
+
+  // TODO might have to do a map out of the actual return statement
   return (
-    <div style={recipes.recipesContainer}>
+    <div style={style.recipesContainer}>
       <h2>Recipes</h2>
-      <div style={recipes.recipesBox}>
+      <ul style={style.recipesBox}>
         {/* NEED TO FIGURE OUT WHY MAP NOT WORKING, SOMETHING TO DO WITH UNDEFINED ON LOAD SO MAYBE CHECK OUT USEEFFET!?*/}
-        {spreadRecipes.map((recipe) => (
-          <div style={recipes.recipe}>
-            <h5>{recipe.label}</h5>
-            <a href={`${recipes.url}`}>
-              <p style={recipes.link}>Link</p>
-            </a>
-            <img
-              style={recipes.pic}
-              src={`${recipes.image}`}
-              alt={`${recipe.label}`}
-            />
-          </div>
-        ))}
-      </div>
+
+        {mappedRecipes}
+      </ul>
     </div>
   );
 };
