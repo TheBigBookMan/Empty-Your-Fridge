@@ -27,7 +27,10 @@ function App() {
           setRecipesInfoArr={setRecipesInfoArr}
         />
         <div className="middle-container">
-          <Bowl ingredientsArr={ingredientsArr} />
+          <Bowl
+            ingredientsArr={ingredientsArr}
+            setIngredientsArr={setIngredientsArr}
+          />
           <Recipes recipesInfoArr={recipesInfoArr} />
         </div>
         <div className="right-container">

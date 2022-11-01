@@ -93,7 +93,9 @@ const Ingredients = ({
             Cuisine type
           </option>
           {cuisines.map((cuisine) => (
-            <option value={cuisine.toLowerCase()}>{cuisine}</option>
+            <option key={cuisine} value={cuisine.toLowerCase()}>
+              {cuisine}
+            </option>
           ))}
         </select>
 
@@ -102,7 +104,9 @@ const Ingredients = ({
             Meal type
           </option>
           {meals.map((meal) => (
-            <option value={meal.toLowerCase()}>{meal}</option>
+            <option key={meal} value={meal.toLowerCase()}>
+              {meal}
+            </option>
           ))}
         </select>
 
@@ -116,7 +120,9 @@ const Ingredients = ({
             Health type
           </option>
           {health.map((type) => (
-            <option value={type.toLowerCase()}>{type}</option>
+            <option key={type} value={type.toLowerCase()}>
+              {type}
+            </option>
           ))}
         </select>
 

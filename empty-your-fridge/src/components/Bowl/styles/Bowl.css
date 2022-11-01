@@ -1,0 +1,4 @@
+.cross:hover {
+  color: red;
+  cursor: pointer;
+}

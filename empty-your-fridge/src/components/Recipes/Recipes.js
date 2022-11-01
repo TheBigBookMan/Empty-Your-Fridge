@@ -13,14 +13,14 @@ const Recipes = ({ recipesInfoArr }) => {
     : spreadRecipes.map((recipe) => (
         <li style={style.recipe} key={recipe.label}>
           <h5 style={style.name}>{recipe.label}</h5>
-          <p style={style.link}>
+          <div style={style.link}>
             <div style={style.linkStar}>
               <a href={`${recipe.url}`} target="_blank">
                 Link
               </a>
               <i style={style.star} className="fa-regular fa-star star"></i>
             </div>
-          </p>
+          </div>
           <img
             style={style.pic}
             src={`${recipe.image}`}
