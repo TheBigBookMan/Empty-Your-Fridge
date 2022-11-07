@@ -8,6 +8,7 @@ export const bowlStyles = {
     backgroundColor: "#fff",
     borderRadius: "10px",
     padding: "15px",
+    fontFamily: "Mukta",
   },
   bowlList: {
     listStyleType: "none",
