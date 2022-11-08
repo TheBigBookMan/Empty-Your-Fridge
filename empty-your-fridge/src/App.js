@@ -1,6 +1,7 @@
 import "./styles/App.css";
 import { useState } from "react";
 import { IngredientProvider } from "./utils/IngredientsContext";
+import { RecipeProvider } from "./utils/RecipesContext";
 import Ingredients from "./components/Ingredients/Ingredients";
 import Bowl from "./components/Bowl/Bowl";
 import Recipes from "./components/Recipes/Recipes";
@@ -8,7 +9,6 @@ import Favourites from "./components/Favourites/Favourites";
 
 function App() {
   // ! can probably delete the usestate for ingredients because now in global state
-  const [ingredientsArr, setIngredientsArr] = useState([]);
   const [recipesInfoArr, setRecipesInfoArr] = useState([]);
 
   //TODO ingredientsArr needs to be passed into the Recipes component where it can be added to local storage and searched in the fetch call
@@ -23,22 +23,19 @@ function App() {
       </header>
       <main className="container">
         <IngredientProvider>
-          <Ingredients
-            setIngredientsArr={setIngredientsArr}
-            ingredientsArr={ingredientsArr}
-            recipesInfoArr={recipesInfoArr}
-            setRecipesInfoArr={setRecipesInfoArr}
-          />
-          <div className="middle-container">
-            <Bowl
-              ingredientsArr={ingredientsArr}
-              setIngredientsArr={setIngredientsArr}
+          <RecipeProvider>
+            <Ingredients
+              recipesInfoArr={recipesInfoArr}
+              setRecipesInfoArr={setRecipesInfoArr}
             />
-            <Recipes recipesInfoArr={recipesInfoArr} />
-          </div>
-          <div className="right-container">
-            <Favourites />
-          </div>
+            <div className="middle-container">
+              <Bowl />
+              <Recipes recipesInfoArr={recipesInfoArr} />
+            </div>
+            <div className="right-container">
+              <Favourites />
+            </div>
+          </RecipeProvider>
         </IngredientProvider>
       </main>
     </div>

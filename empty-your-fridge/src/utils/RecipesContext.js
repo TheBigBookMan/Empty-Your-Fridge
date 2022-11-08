@@ -5,7 +5,7 @@ const RecipeContext = createContext();
 export const useRecipeContext = () => useContext(RecipeContext);
 
 export const RecipeProvider = ({ children }) => {
-  const [recipes, setRecipes] = useState([]);
+  const [recipes, setRecipes] = useState();
 
   // ? may need to add in a remove/add recipe for the favourites, but will find out when comes to that
 

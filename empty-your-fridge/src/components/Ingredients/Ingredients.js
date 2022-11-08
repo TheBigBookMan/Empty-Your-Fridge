@@ -1,28 +1,31 @@
 import React, { useState } from "react";
 import { useIngredientContext } from "../../utils/IngredientsContext";
+import { useRecipeContext } from "../../utils/RecipesContext";
 import { cuisines, meals, health } from "../../utils/types";
 import "./styles/Ingredients.css";
 import { ingredientsStyles as style } from "./styles/IngredientsStyles";
 import apiQuery from "../../utils/API";
 
-const Ingredients = ({ recipesInfoArr, setRecipesInfoArr }) => {
+const Ingredients = () => {
   const [newIngredientInput, setNewIngredientInput] = useState("");
   const [cuisineSelection, setCuisineSelection] = useState("");
   const [mealSelection, setMealSelection] = useState("");
   const [healthSelection, setHealthSelection] = useState("");
 
   const { ingredients, addIngredient } = useIngredientContext();
+  const { recipes, setRecipes } = useRecipeContext();
   // console.log(ingredients);
+  console.log(recipes);
 
   const createApiCall = async (e) => {
     e.preventDefault();
-    const getRecipes = await apiQuery(
+    let getRecipes = await apiQuery(
       ingredients,
       healthSelection,
       cuisineSelection,
       mealSelection
     );
-    setRecipesInfoArr([...recipesInfoArr, getRecipes]);
+    setRecipes(getRecipes);
   };
 
   const handleInputChange = (e) => {

@@ -8,6 +8,12 @@ const Recipes = ({ recipesInfoArr }) => {
   const spreadRecipes = recipesInfoArr[0];
   console.log(spreadRecipes);
 
+  // TODO add in global state for the array of food
+
+  //TODO make the mappedrecipes appear on a useEffect when the search recipes change has happened
+
+  // TODO need to make it so can resubmit the recipe list if they remove ingredients or add more
+
   const mappedRecipes = !spreadRecipes
     ? ""
     : spreadRecipes.map((recipe) => (
