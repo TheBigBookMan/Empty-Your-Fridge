@@ -18,4 +18,12 @@ export const IngredientProvider = ({ children }) => {
     );
     setIngredients(newIngredientList);
   };
+
+  return (
+    <IngredientContext.Provider
+      value={{ ingredients, addIngredient, removeIngredient }}
+    >
+      {children}
+    </IngredientContext.Provider>
+  );
 };
