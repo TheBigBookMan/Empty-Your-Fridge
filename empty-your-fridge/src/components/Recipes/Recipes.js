@@ -3,7 +3,7 @@ import "./styles/recipeStyle.css";
 import { recipeStyles as style } from "./styles/RecipesStyles";
 import { useRecipeContext } from "../../utils/RecipesContext";
 
-// TODO add in a favourites button from fontawesome with the love heart
+// TODO add in global state of the favourites array
 
 const Recipes = () => {
   const { recipes } = useRecipeContext();
