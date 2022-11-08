@@ -28,6 +28,7 @@ const Ingredients = ({
     setRecipesInfoArr([...recipesInfoArr, getRecipes]);
   };
 
+  //! remove this because it's in context state
   const handleInputChange = (e) => {
     e.preventDefault();
     setIngredientsArr([...ingredientsArr, newIngredientInput.toLowerCase()]);
