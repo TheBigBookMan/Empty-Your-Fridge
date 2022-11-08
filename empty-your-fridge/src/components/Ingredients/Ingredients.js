@@ -38,7 +38,6 @@ const Ingredients = () => {
   const handleIngredientInput = (e) => {
     const { target } = e;
     const inputValue = target.value;
-
     setNewIngredientInput(inputValue);
   };
 

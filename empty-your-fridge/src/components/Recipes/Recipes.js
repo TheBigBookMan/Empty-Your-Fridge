@@ -1,23 +1,17 @@
 import React from "react";
 import "./styles/recipeStyle.css";
 import { recipeStyles as style } from "./styles/RecipesStyles";
+import { useRecipeContext } from "../../utils/RecipesContext";
 
 // TODO add in a favourites button from fontawesome with the love heart
 
-const Recipes = ({ recipesInfoArr }) => {
-  const spreadRecipes = recipesInfoArr[0];
-  console.log(spreadRecipes);
+const Recipes = () => {
+  const { recipes } = useRecipeContext();
 
-  // TODO add in global state for the array of food
-
-  //TODO make the mappedrecipes appear on a useEffect when the search recipes change has happened
-
-  // TODO need to make it so can resubmit the recipe list if they remove ingredients or add more
-
-  const mappedRecipes = !spreadRecipes
+  const mappedRecipes = !recipes
     ? ""
-    : spreadRecipes.map((recipe) => (
-        <li style={style.recipe} key={recipe.label}>
+    : recipes.map((recipe, index) => (
+        <li style={style.recipe} key={recipe.label + index}>
           <h5 style={style.name}>{recipe.label}</h5>
           <div style={style.link}>
             <div style={style.linkStar}>
@@ -35,7 +29,6 @@ const Recipes = ({ recipesInfoArr }) => {
         </li>
       ));
 
-  // TODO might have to do a map out of the actual return statement
   return (
     <div style={style.recipesContainer}>
       <h2>Recipes</h2>
