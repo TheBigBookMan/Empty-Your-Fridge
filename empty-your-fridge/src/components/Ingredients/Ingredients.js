@@ -1,26 +1,23 @@
 import React, { useState } from "react";
+import { useIngredientContext } from "../../utils/IngredientsContext";
 import { cuisines, meals, health } from "../../utils/types";
 import "./styles/Ingredients.css";
 import { ingredientsStyles as style } from "./styles/IngredientsStyles";
 import apiQuery from "../../utils/API";
 
-const Ingredients = ({
-  setIngredientsArr,
-  ingredientsArr,
-  recipesInfoArr,
-  setRecipesInfoArr,
-}) => {
+const Ingredients = ({ recipesInfoArr, setRecipesInfoArr }) => {
   const [newIngredientInput, setNewIngredientInput] = useState("");
   const [cuisineSelection, setCuisineSelection] = useState("");
   const [mealSelection, setMealSelection] = useState("");
   const [healthSelection, setHealthSelection] = useState("");
 
-  // console.log(recipesInfoArr);
+  const { ingredients, addIngredient } = useIngredientContext();
+  // console.log(ingredients);
 
   const createApiCall = async (e) => {
     e.preventDefault();
     const getRecipes = await apiQuery(
-      ingredientsArr,
+      ingredients,
       healthSelection,
       cuisineSelection,
       mealSelection
@@ -31,7 +28,7 @@ const Ingredients = ({
   //! remove this because it's in context state
   const handleInputChange = (e) => {
     e.preventDefault();
-    setIngredientsArr([...ingredientsArr, newIngredientInput.toLowerCase()]);
+    addIngredient(newIngredientInput.toLowerCase());
     setNewIngredientInput("");
   };
 
