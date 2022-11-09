@@ -11,11 +11,8 @@ import { useFavouriteContext } from "../../utils/FavouritesContext";
 const Recipes = () => {
   const { recipes } = useRecipeContext();
   const { favourites, addFavourite } = useFavouriteContext();
-  console.log(favourites);
 
   const handleChange = (label, link) => {
-    // console.log(label);
-    // console.log(link);
     const inputToFavs = { label, link };
     addFavourite(inputToFavs);
   };

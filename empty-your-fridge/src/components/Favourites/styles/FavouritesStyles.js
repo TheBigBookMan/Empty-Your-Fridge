@@ -11,14 +11,12 @@ export const favouritesStyles = {
     paddingLeft: "10px",
   },
   recipeContainer: {
-    border: "black solid 2px",
     width: "full",
     height: "90%",
-    padding: "2px",
+    padding: "5px",
     listStyleType: "none",
   },
   recipeItem: {
-    border: "red solid 2px",
     height: "30px",
     display: "flex",
   },

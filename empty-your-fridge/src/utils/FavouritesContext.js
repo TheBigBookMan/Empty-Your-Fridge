@@ -13,7 +13,7 @@ export const FavouriteProvider = ({ children }) => {
 
   const removeFavourite = (input) => {
     const newFavouritesList = favourites.filter(
-      (favourite) => favourite !== input
+      (favourite) => favourite.label !== input
     );
     setFavourites(newFavouritesList);
   };
