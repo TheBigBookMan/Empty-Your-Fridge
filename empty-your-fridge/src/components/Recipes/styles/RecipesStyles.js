@@ -45,4 +45,7 @@ export const recipeStyles = {
     alignItems: "center",
     width: "155px",
   },
+  medium: {
+    width: "400px",
+  },
 };
