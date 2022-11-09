@@ -2,11 +2,23 @@ import React from "react";
 import "./styles/recipeStyle.css";
 import { recipeStyles as style } from "./styles/RecipesStyles";
 import { useRecipeContext } from "../../utils/RecipesContext";
+import { useFavouriteContext } from "../../utils/FavouritesContext";
 
 // TODO add in global state of the favourites array
 
+//TODO add the favourites array to the local storage
+
 const Recipes = () => {
   const { recipes } = useRecipeContext();
+  const { favourites, addFavourite } = useFavouriteContext();
+  console.log(favourites);
+
+  const handleChange = (label, link) => {
+    // console.log(label);
+    // console.log(link);
+    const inputToFavs = { label, link };
+    addFavourite(inputToFavs);
+  };
 
   const mappedRecipes = !recipes
     ? ""
@@ -18,7 +30,11 @@ const Recipes = () => {
               <a href={`${recipe.url}`} target="_blank">
                 Link
               </a>
-              <i style={style.star} className="fa-regular fa-star star"></i>
+              <i
+                style={style.star}
+                onClick={() => handleChange(recipe.label, recipe.url)}
+                className="fa-regular fa-star star"
+              ></i>
             </div>
           </div>
           <img
