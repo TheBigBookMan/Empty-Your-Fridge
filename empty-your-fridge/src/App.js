@@ -1,9 +1,7 @@
 import "./styles/App.css";
-import { useState } from "react";
 import { IngredientProvider } from "./utils/IngredientsContext";
 import { RecipeProvider } from "./utils/RecipesContext";
 import { FavouriteProvider } from "./utils/FavouritesContext";
-import { WindowWidthContextProvider } from "./utils/WindowWidthContext";
 import Ingredients from "./components/Ingredients/Ingredients";
 import Bowl from "./components/Bowl/Bowl";
 import Recipes from "./components/Recipes/Recipes";
@@ -21,23 +19,21 @@ function App() {
         <h1>Empty Your Fridge</h1>
       </header>
       <main className="container">
-        <WindowWidthContextProvider>
-          <IngredientProvider>
-            <RecipeProvider>
-              <Ingredients />
-              <FavouriteProvider>
-                <div className="middle-container">
-                  <Bowl />
+        <IngredientProvider>
+          <RecipeProvider>
+            <Ingredients />
+            <FavouriteProvider>
+              <div className="middle-container">
+                <Bowl />
 
-                  <Recipes />
-                </div>
-                <div className="right-container">
-                  <Favourites />
-                </div>
-              </FavouriteProvider>
-            </RecipeProvider>
-          </IngredientProvider>
-        </WindowWidthContextProvider>
+                <Recipes />
+              </div>
+              <div className="right-container">
+                <Favourites />
+              </div>
+            </FavouriteProvider>
+          </RecipeProvider>
+        </IngredientProvider>
       </main>
     </div>
   );
