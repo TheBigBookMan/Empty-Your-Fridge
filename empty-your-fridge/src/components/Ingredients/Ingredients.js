@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { useIngredientContext } from "../../utils/IngredientsContext";
 import { useRecipeContext } from "../../utils/RecipesContext";
 import { cuisines, meals, health } from "../../utils/types";
-import "./styles/Ingredients.css";
-import { ingredientsStyles as style } from "./styles/IngredientsStyles";
 import apiQuery from "../../utils/API";
 
 const Ingredients = () => {
@@ -60,16 +58,15 @@ const Ingredients = () => {
   };
 
   return (
-    <div style={style.ingredientsContainer}>
+    <div>
       <h3>
         Type in the ingredient and click "Add" to enter your ingredient to the
         list. When ready, click on "Search Recipes" to view all the yummy
         recipes that match your criteria!
       </h3>
-      <form style={style.formContainer}>
+      <form>
         <input
           type="text"
-          style={style.ingredientInput}
           placeholder="Ingredients"
           onChange={handleIngredientInput}
           value={newIngredientInput}
@@ -82,7 +79,7 @@ const Ingredients = () => {
           <strong>Add</strong>
         </button>
 
-        <select style={style.cuisineInput} onChange={changeCuisine}>
+        <select onChange={changeCuisine}>
           <option
             value="Cuisine type"
             defaultValue="Cuisine type"
@@ -98,7 +95,7 @@ const Ingredients = () => {
           ))}
         </select>
 
-        <select style={style.mealInput} onChange={changeMeal}>
+        <select onChange={changeMeal}>
           <option value="Meal type" defaultValue="Meal type" disabled hidden>
             Meal type
           </option>
@@ -109,7 +106,7 @@ const Ingredients = () => {
           ))}
         </select>
 
-        <select style={style.healthType} onChange={changeHealth}>
+        <select onChange={changeHealth}>
           <option
             value="Health type"
             defaultValue="Health type"
@@ -125,12 +122,7 @@ const Ingredients = () => {
           ))}
         </select>
 
-        <button
-          style={style.submitInput}
-          type="submit"
-          className="submit-input"
-          onClick={createApiCall}
-        >
+        <button type="submit" className="submit-input" onClick={createApiCall}>
           Search recipes
         </button>
       </form>
