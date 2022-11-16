@@ -29,10 +29,12 @@ const Favourites = () => {
               className="flex flex-row items-center justify-between border-b p-2"
             >
               <a href={recipe.link} target="_blank" rel="noreferrer">
-                <p className="">{recipe.label}</p>
+                <p className="text-indigo-500 font-bold hover:text-indigo-300">
+                  {recipe.label}
+                </p>
               </a>
               <AiOutlineClose
-                className="hover:cursor-pointer hover:scale-125 hover:rotate-180 transition-all"
+                className="hover:cursor-pointer hover:scale-125 hover:rotate-180 transition-all ml-2"
                 onClick={() => handleRemove(recipe.label)}
               />
             </li>
