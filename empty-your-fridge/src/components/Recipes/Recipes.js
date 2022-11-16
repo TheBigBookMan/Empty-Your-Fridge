@@ -24,11 +24,13 @@ const Recipes = () => {
           key={recipe.label + index}
           className="flex flex-col items-center border-solid border-2 border-slate-200 rounded-lg shadow-md bg-slate-200 p-2 w-full "
         >
-          <h5>{recipe.label}</h5>
+          <h1 className="font-bold text-lg text-indigo-500 text-center ">
+            {recipe.label}
+          </h1>
           <div>
-            <div>
+            <div className="flex flex-row gap-5 items-center">
               <a href={`${recipe.url}`} target="_blank" rel="noreferrer">
-                Link
+                Recipe Link
               </a>
               <i
                 onClick={() => handleChange(recipe.label, recipe.url)}
