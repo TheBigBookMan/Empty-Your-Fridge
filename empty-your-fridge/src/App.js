@@ -14,7 +14,7 @@ function App() {
   //TODO and then into recipes so can api call
 
   return (
-    <div className="font-mono">
+    <div className="font-Montserrat">
       <header className="text-center">
         <h1 className="font-bold text-3xl">Empty Your Fridge</h1>
       </header>
