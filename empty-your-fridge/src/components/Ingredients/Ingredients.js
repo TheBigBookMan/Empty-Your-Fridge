@@ -58,14 +58,15 @@ const Ingredients = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col gap-3 border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2">
       <h3>
-        Type in the ingredient and click "Add" to enter your ingredient to the
-        list. When ready, click on "Search Recipes" to view all the yummy
-        recipes that match your criteria!
+        Type in the ingredient and click "Add Ingredient" to enter your
+        ingredient to the list. When ready, click on "Search Recipes" to view
+        all the yummy recipes that match your criteria!
       </h3>
-      <form>
+      <form className="flex flex-col gap-4 border-solid border-2 border-slate-200 rounded-lg shadow-md bg-slate-300  p-2 h-[300px]">
         <input
+          className="pl-1 h-[30px] rounded-lg"
           type="text"
           placeholder="Ingredients"
           onChange={handleIngredientInput}
@@ -74,12 +75,12 @@ const Ingredients = () => {
         <button
           onClick={handleInputChange}
           type="submit"
-          className="ingredient-btn"
+          className="bg-slate-100 rounded-lg h-[40px] text-lg w-3/6 hover:bg-slate-500 hover:text-zinc-200 transition-all"
         >
-          <strong>Add</strong>
+          <p className=" text-md">Add Ingredient</p>
         </button>
 
-        <select onChange={changeCuisine}>
+        <select onChange={changeCuisine} className="h-[35px] rounded pl-1">
           <option
             value="Cuisine type"
             defaultValue="Cuisine type"
@@ -95,9 +96,9 @@ const Ingredients = () => {
           ))}
         </select>
 
-        <select onChange={changeMeal}>
+        <select onChange={changeMeal} className="h-[35px] rounded pl-1">
           <option value="Meal type" defaultValue="Meal type" disabled hidden>
-            Meal type
+            Meal Type
           </option>
           {meals.map((meal) => (
             <option key={meal} value={meal.toLowerCase()}>
@@ -106,14 +107,14 @@ const Ingredients = () => {
           ))}
         </select>
 
-        <select onChange={changeHealth}>
+        <select onChange={changeHealth} className="h-[35px] rounded pl-1">
           <option
             value="Health type"
             defaultValue="Health type"
             disabled
             hidden
           >
-            Health type
+            Health Type
           </option>
           {health.map((type) => (
             <option key={type} value={type.toLowerCase()}>
@@ -122,8 +123,12 @@ const Ingredients = () => {
           ))}
         </select>
 
-        <button type="submit" className="submit-input" onClick={createApiCall}>
-          Search recipes
+        <button
+          type="submit"
+          className="bg-indigo-300 rounded-lg h-[60px] text-lg font-bold hover:bg-indigo-500 hover:text-zinc-100 transition-all"
+          onClick={createApiCall}
+        >
+          Search Recipes
         </button>
       </form>
     </div>

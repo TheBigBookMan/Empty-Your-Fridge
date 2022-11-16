@@ -14,21 +14,21 @@ function App() {
   //TODO and then into recipes so can api call
 
   return (
-    <div>
-      <header className="App-header">
-        <h1>Empty Your Fridge</h1>
+    <div className="font-mono">
+      <header className="text-center">
+        <h1 className="font-bold text-2xl">Empty Your Fridge</h1>
       </header>
-      <main className="container">
+      <main className="flex flex-col gap-10 p-2 h-full">
         <IngredientProvider>
           <RecipeProvider>
             <Ingredients />
             <FavouriteProvider>
-              <div className="middle-container">
+              <div className="">
                 <Bowl />
 
                 <Recipes />
               </div>
-              <div className="right-container">
+              <div className="">
                 <Favourites />
               </div>
             </FavouriteProvider>
