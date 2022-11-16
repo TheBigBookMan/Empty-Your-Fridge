@@ -14,16 +14,22 @@ const Favourites = () => {
   };
 
   return (
-    <div>
-      <h2>Favourites</h2>
-      {!favourites ? (
+    <div className="border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2">
+      <h2 className="font-bold text-lg text-center">Favourites</h2>
+      <p className="italic mb-2">
+        Click on the name to go to the recipe webpage
+      </p>
+      {favourites.length === 0 ? (
         <div>No favourites yet...</div>
       ) : (
-        <ul>
+        <ul className="flex flex-col gap-2 max-h-[200px] overflow-y-scroll">
           {favourites.map((recipe) => (
-            <li>
+            <li
+              key={recipe}
+              className="flex flex-row items-center justify-between border-b p-2"
+            >
               <a href={recipe.link} target="_blank" rel="noreferrer">
-                <p>{recipe.label}</p>
+                <p className="">{recipe.label}</p>
               </a>
               <i
                 className="fa-regular fa-circle-xmark cross"
