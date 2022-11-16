@@ -16,9 +16,9 @@ function App() {
   return (
     <div className="font-mono">
       <header className="text-center">
-        <h1 className="font-bold text-2xl">Empty Your Fridge</h1>
+        <h1 className="font-bold text-3xl">Empty Your Fridge</h1>
       </header>
-      <main className="flex flex-col gap-10 p-2 h-full">
+      <main className="flex flex-col gap-2 p-2 h-full">
         <IngredientProvider>
           <RecipeProvider>
             <Ingredients />

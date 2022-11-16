@@ -6,6 +6,8 @@ import { useFavouriteContext } from "../../utils/FavouritesContext";
 
 //TODO add the favourites array to the local storage
 
+//TODO add in a loading thing for when API call for the recipes
+
 const Recipes = () => {
   const { recipes } = useRecipeContext();
   const { favourites, addFavourite } = useFavouriteContext();
