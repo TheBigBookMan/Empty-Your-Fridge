@@ -8,10 +8,14 @@ import { useIngredientContext } from "../../utils/IngredientsContext";
 const Bowl = () => {
   const { ingredients, removeIngredient } = useIngredientContext();
   return (
-    <ul className="flex flex-row flex-wrap w-full gap-10 border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2 items-center justify-around">
+    <ul className="flex flex-row flex-wrap w-full gap-5 border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2 items-center justify-around">
       {ingredients.map((ingredient) => (
-        <li key={ingredient} value={ingredient}>
-          <p>{ingredient.toLowerCase()}</p>{" "}
+        <li
+          key={ingredient}
+          value={ingredient}
+          className="flex flex-col items-center"
+        >
+          <p className="text-indigo-600">{ingredient.toLowerCase()}</p>{" "}
           <i
             className="fa-regular fa-circle-xmark cross"
             onClick={() => removeIngredient(ingredient)}

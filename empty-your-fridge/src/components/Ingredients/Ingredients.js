@@ -64,9 +64,9 @@ const Ingredients = () => {
         ingredient to the list. When ready, click on "Search Recipes" to view
         all the yummy recipes that match your criteria!
       </h3>
-      <form className="flex flex-col gap-4 border-solid border-2 border-slate-200 rounded-lg shadow-md bg-slate-300  p-2 h-[300px]">
+      <form className="flex flex-col gap-4 border-solid border-2 border-slate-200 rounded-lg shadow-md bg-slate-200  p-2 h-[300px]">
         <input
-          className="pl-1 h-[30px] rounded-lg"
+          className="p-1 h-[30px] rounded-lg"
           type="text"
           placeholder="Ingredients"
           onChange={handleIngredientInput}

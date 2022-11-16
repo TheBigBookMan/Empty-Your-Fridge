@@ -23,7 +23,7 @@ function App() {
           <RecipeProvider>
             <Ingredients />
             <FavouriteProvider>
-              <div className="">
+              <div className="flex flex-col gap-2">
                 <Bowl />
 
                 <Recipes />

@@ -38,8 +38,8 @@ const Recipes = () => {
       ));
 
   return (
-    <div>
-      <h2>Recipes</h2>
+    <div className="border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2">
+      <h2 className="font-bold text-lg text-center">Recipes</h2>
       <ul>
         {/* NEED TO FIGURE OUT WHY MAP NOT WORKING, SOMETHING TO DO WITH UNDEFINED ON LOAD SO MAYBE CHECK OUT USEEFFET!?*/}
 
