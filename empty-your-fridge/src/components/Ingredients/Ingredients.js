@@ -61,7 +61,7 @@ const Ingredients = () => {
     <div className="flex flex-col gap-3 border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2">
       <h3>
         Type in the ingredient and click "Add Ingredient" to enter your
-        ingredient to the list. When ready, click on "Search Recipes" to view
+        ingredient to the bowl. When ready, click on "Search Recipes" to view
         all the yummy recipes that match your criteria!
       </h3>
       <form className="flex flex-col gap-4 border-solid border-2 border-slate-200 rounded-lg shadow-md bg-slate-200  p-2 h-[300px]">
