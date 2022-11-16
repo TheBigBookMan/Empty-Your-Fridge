@@ -53,11 +53,13 @@ const Recipes = () => {
         Click on the link to be taken to the webpage where the recipe is. You
         can also click on the star to favourite the recipe for later reference!
       </p>
-      <ul className="flex flex-col items-center gap-2 h-[400px] overflow-y-scroll">
+      <ul className="flex flex-col items-center gap-2 max-h-[400px] overflow-y-scroll">
         {/* add in a loader for while data not there */}
 
         {!mappedRecipes ? (
-          <div>Search for recipes by clicking "Search Recipes"!</div>
+          <div className="italic">
+            Search for recipes by clicking "Search Recipes"!
+          </div>
         ) : (
           mappedRecipes
         )}
