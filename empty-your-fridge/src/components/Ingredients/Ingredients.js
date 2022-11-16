@@ -125,7 +125,7 @@ const Ingredients = () => {
 
         <button
           type="submit"
-          className="bg-indigo-300 rounded-lg h-[60px] text-lg font-bold hover:bg-indigo-500 hover:text-zinc-100 transition-all"
+          className="bg-indigo-300 rounded-lg h-[60px] text-lg font-bold hover:bg-indigo-500 hover:text-zinc-100 active:scale-90 transition-all"
           onClick={createApiCall}
         >
           Search Recipes
