@@ -2,14 +2,10 @@ import React from "react";
 import { useIngredientContext } from "../../utils/IngredientsContext";
 import { AiOutlineClose } from "react-icons/ai";
 
-//TODO need to make the X buttons highlight red on hover and then onClick will remove the ingredients from the ingredients arr
-
-// TODO change the fontawesome icon into the react icons
-
 const Bowl = () => {
   const { ingredients, removeIngredient } = useIngredientContext();
   return (
-    <div className="flex flex-col gap-2 border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2">
+    <div className="flex flex-col gap-2 md:w-2/6 border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2">
       <h1 className="text-center font-bold text-lg">Ingredient Bowl</h1>
       {ingredients.length === 0 ? (
         <p>Add in ingredients above to be added to the ingredient bowl.</p>

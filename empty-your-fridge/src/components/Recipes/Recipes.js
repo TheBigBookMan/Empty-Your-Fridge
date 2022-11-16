@@ -3,16 +3,10 @@ import { useRecipeContext } from "../../utils/RecipesContext";
 import { useFavouriteContext } from "../../utils/FavouritesContext";
 import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 
-// TODO add in global state of the favourites array
-
-//TODO add the favourites array to the local storage
-
-//TODO add in a loading thing for when API call for the recipes
-
 const Recipes = () => {
   const { recipes } = useRecipeContext();
   const { favourites, addFavourite, removeFavourite } = useFavouriteContext();
-  console.log(favourites);
+
   const handleChange = (label, link) => {
     const inputToFavs = { label, link };
     addFavourite(inputToFavs);

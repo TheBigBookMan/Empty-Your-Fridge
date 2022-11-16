@@ -2,10 +2,6 @@ import React from "react";
 import { useFavouriteContext } from "../../utils/FavouritesContext";
 import { AiOutlineClose } from "react-icons/ai";
 
-//TODO can have the array of ingredients prop handed through and loop through and add them to local storage as a history to click on so that users can quick add to the bowl
-
-//TODO add i the react icons for the cancel
-
 const Favourites = () => {
   const { favourites, removeFavourite } = useFavouriteContext();
 

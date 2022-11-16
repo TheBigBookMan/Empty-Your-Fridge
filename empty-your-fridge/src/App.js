@@ -8,11 +8,6 @@ import Recipes from "./components/Recipes/Recipes";
 import Favourites from "./components/Favourites/Favourites";
 
 function App() {
-  //TODO ingredientsArr needs to be passed into the Recipes component where it can be added to local storage and searched in the fetch call
-
-  // TODO Create a state array that holds the selection criteria of cuisine, meal, health and pass props into ingredients to get values
-  //TODO and then into recipes so can api call
-
   return (
     <div className="font-Montserrat">
       <header className="text-center">
@@ -21,13 +16,14 @@ function App() {
       <main className="flex flex-col gap-3 p-2 h-full">
         <IngredientProvider>
           <RecipeProvider>
-            <Ingredients />
             <FavouriteProvider>
-              <div className="flex flex-col gap-3">
-                <Bowl />
+              <div className="flex flex-col gap-3 md:flex-row ">
+                <Ingredients />
 
-                <Recipes />
+                <Bowl />
               </div>
+              <Recipes />
+
               <div className="">
                 <Favourites />
               </div>

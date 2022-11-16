@@ -31,6 +31,7 @@ const Ingredients = () => {
   };
 
   //! NEED TO MAKE SURE THAT USERS CANT INPUT EMPTY ""
+  //! MEED TP MAKE SURE USERS CANT PUT IN DOUBLE INGREDIENTS
   const handleIngredientInput = (e) => {
     const { target } = e;
     const inputValue = target.value;
@@ -56,7 +57,7 @@ const Ingredients = () => {
   };
 
   return (
-    <div className="flex flex-col gap-3 border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-5">
+    <div className="flex flex-col gap-3 md:w-4/6 border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-5">
       <h3>
         Type in the ingredient and click "Add Ingredient" to enter your
         ingredient to the bowl. When ready, click on "Search Recipes" to view
