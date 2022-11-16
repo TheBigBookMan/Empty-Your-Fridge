@@ -75,7 +75,7 @@ const Ingredients = () => {
         <button
           onClick={handleInputChange}
           type="submit"
-          className="bg-slate-100 rounded-lg h-[40px] text-lg w-3/6 hover:bg-slate-500 hover:text-zinc-200 transition-all"
+          className="bg-slate-100 rounded-lg h-[40px] text-lg w-3/6 hover:bg-slate-600 hover:text-zinc-100 transition-all"
         >
           <p className=" text-md">Add Ingredient</p>
         </button>
