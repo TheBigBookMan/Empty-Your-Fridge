@@ -1,6 +1,7 @@
 import React from "react";
 import { useRecipeContext } from "../../utils/RecipesContext";
 import { useFavouriteContext } from "../../utils/FavouritesContext";
+import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 
 // TODO add in global state of the favourites array
 
@@ -10,11 +11,15 @@ import { useFavouriteContext } from "../../utils/FavouritesContext";
 
 const Recipes = () => {
   const { recipes } = useRecipeContext();
-  const { favourites, addFavourite } = useFavouriteContext();
+  const { favourites, addFavourite, removeFavourite } = useFavouriteContext();
   console.log(favourites);
   const handleChange = (label, link) => {
     const inputToFavs = { label, link };
     addFavourite(inputToFavs);
+  };
+
+  const handleRemove = (label) => {
+    removeFavourite(label);
   };
 
   const mappedRecipes = !recipes
@@ -32,10 +37,17 @@ const Recipes = () => {
               <a href={`${recipe.url}`} target="_blank" rel="noreferrer">
                 Recipe Link
               </a>
-              <i
-                onClick={() => handleChange(recipe.label, recipe.url)}
-                className="fa-regular fa-star star"
-              ></i>
+              {favourites.some((name) => name.label === recipe.label) ? (
+                <MdFavorite
+                  className="hover:cursor-pointer"
+                  onClick={() => handleRemove(recipe.label)}
+                />
+              ) : (
+                <MdFavoriteBorder
+                  className="hover:cursor-pointer hover:scale-125"
+                  onClick={() => handleChange(recipe.label, recipe.url)}
+                />
+              )}
             </div>
           </div>
           <img

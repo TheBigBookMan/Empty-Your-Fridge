@@ -12,8 +12,6 @@ const Ingredients = () => {
 
   const { ingredients, addIngredient } = useIngredientContext();
   const { recipes, setRecipes } = useRecipeContext();
-  // console.log(ingredients);
-  console.log(recipes);
 
   const createApiCall = async (e) => {
     e.preventDefault();

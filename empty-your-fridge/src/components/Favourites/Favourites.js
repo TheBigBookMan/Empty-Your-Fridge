@@ -1,5 +1,6 @@
 import React from "react";
 import { useFavouriteContext } from "../../utils/FavouritesContext";
+import { AiOutlineClose } from "react-icons/ai";
 
 //TODO can have the array of ingredients prop handed through and loop through and add them to local storage as a history to click on so that users can quick add to the bowl
 
@@ -7,7 +8,6 @@ import { useFavouriteContext } from "../../utils/FavouritesContext";
 
 const Favourites = () => {
   const { favourites, removeFavourite } = useFavouriteContext();
-  console.log(favourites);
 
   const handleRemove = (label) => {
     removeFavourite(label);
@@ -23,18 +23,18 @@ const Favourites = () => {
         <div>No favourites yet...</div>
       ) : (
         <ul className="flex flex-col gap-2 max-h-[200px] overflow-y-scroll">
-          {favourites.map((recipe) => (
+          {favourites.map((recipe, index) => (
             <li
-              key={recipe}
+              key={recipe + index}
               className="flex flex-row items-center justify-between border-b p-2"
             >
               <a href={recipe.link} target="_blank" rel="noreferrer">
                 <p className="">{recipe.label}</p>
               </a>
-              <i
-                className="fa-regular fa-circle-xmark cross"
+              <AiOutlineClose
+                className="hover:cursor-pointer hover:scale-125 hover:rotate-180 transition-all"
                 onClick={() => handleRemove(recipe.label)}
-              ></i>
+              />
             </li>
           ))}
         </ul>

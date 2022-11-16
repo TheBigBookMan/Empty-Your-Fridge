@@ -1,5 +1,6 @@
 import React from "react";
 import { useIngredientContext } from "../../utils/IngredientsContext";
+import { AiOutlineClose } from "react-icons/ai";
 
 //TODO need to make the X buttons highlight red on hover and then onClick will remove the ingredients from the ingredients arr
 
@@ -7,7 +8,6 @@ import { useIngredientContext } from "../../utils/IngredientsContext";
 
 const Bowl = () => {
   const { ingredients, removeIngredient } = useIngredientContext();
-  console.log(ingredients);
   return (
     <div className="flex flex-col gap-2 border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2">
       <h1 className="text-center font-bold text-lg">Ingredient Bowl</h1>
@@ -22,10 +22,10 @@ const Bowl = () => {
               className="flex flex-col items-center"
             >
               <p className="text-indigo-600">{ingredient.toLowerCase()}</p>{" "}
-              <i
-                className="fa-regular fa-circle-xmark cross"
+              <AiOutlineClose
+                className="hover:cursor-pointer hover:scale-125 hover:rotate-180 transition-all"
                 onClick={() => removeIngredient(ingredient)}
-              ></i>
+              />
             </li>
           ))}
         </ul>
