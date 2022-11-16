@@ -20,7 +20,10 @@ const Recipes = () => {
   const mappedRecipes = !recipes
     ? ""
     : recipes.map((recipe, index) => (
-        <li key={recipe.label + index}>
+        <li
+          key={recipe.label + index}
+          className="flex flex-col items-center border-solid border-2 border-slate-200 rounded-lg shadow-md bg-slate-200 p-2 w-full "
+        >
           <h5>{recipe.label}</h5>
           <div>
             <div>
@@ -33,17 +36,29 @@ const Recipes = () => {
               ></i>
             </div>
           </div>
-          <img src={`${recipe.image}`} alt={`${recipe.label}`} />
+          <img
+            className="w-40"
+            src={`${recipe.image}`}
+            alt={`${recipe.label}`}
+          />
         </li>
       ));
 
   return (
     <div className="border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2">
       <h2 className="font-bold text-lg text-center">Recipes</h2>
-      <ul>
-        {/* NEED TO FIGURE OUT WHY MAP NOT WORKING, SOMETHING TO DO WITH UNDEFINED ON LOAD SO MAYBE CHECK OUT USEEFFET!?*/}
+      <p>
+        Click on the link to be taken to the webpage where the recipe is. You
+        can also click on the star to favourite the recipe for later reference!
+      </p>
+      <ul className="flex flex-col items-center gap-2 h-[400px] overflow-y-scroll">
+        {/* add in a loader for while data not there */}
 
-        {mappedRecipes}
+        {!mappedRecipes ? (
+          <div>Search for recipes by clicking "Search Recipes"!</div>
+        ) : (
+          mappedRecipes
+        )}
       </ul>
     </div>
   );
