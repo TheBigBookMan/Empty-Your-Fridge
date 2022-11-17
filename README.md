@@ -13,4 +13,5 @@ This app was built with Javascript, a third party API, TailwindCSS and create-re
 ## Helped URL
 
 Food API: https://www.edamam.com/
+
 Plate icon: https://icons8.com/icon/tVAVrrDlITfS/plate
