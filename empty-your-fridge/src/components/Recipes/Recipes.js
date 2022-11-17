@@ -6,7 +6,7 @@ import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 const Recipes = () => {
   const { recipes } = useRecipeContext();
   const { favourites, addFavourite, removeFavourite } = useFavouriteContext();
-
+  console.log(favourites);
   const handleChange = (label, link) => {
     const inputToFavs = { label, link };
     addFavourite(inputToFavs);
@@ -31,7 +31,12 @@ const Recipes = () => {
               <a href={`${recipe.url}`} target="_blank" rel="noreferrer">
                 Recipe Link
               </a>
-              {favourites.some((name) => name.label === recipe.label) ? (
+              {favourites.length === 0 ? (
+                <MdFavoriteBorder
+                  className="hover:cursor-pointer hover:scale-125"
+                  onClick={() => handleChange(recipe.label, recipe.url)}
+                />
+              ) : favourites.some((name) => name.label === recipe.label) ? (
                 <MdFavorite
                   className="hover:cursor-pointer"
                   onClick={() => handleRemove(recipe.label)}
