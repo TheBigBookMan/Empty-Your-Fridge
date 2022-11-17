@@ -53,7 +53,7 @@ const Recipes = () => {
       ));
 
   return (
-    <div className="border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2 lg:max-w-full">
+    <div className="border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-2 lg:max-w-[1120px]">
       <h2 className="font-bold text-lg text-center">Recipes</h2>
       <p>
         Click on the link to be taken to the webpage where the recipe is. You
