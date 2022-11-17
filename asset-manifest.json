@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Empty-Your-Fridge/static/css/main.9018f1a0.css",
-    "main.js": "/Empty-Your-Fridge/static/js/main.b49950e7.js",
+    "main.js": "/Empty-Your-Fridge/static/js/main.e5ec0b75.js",
     "index.html": "/Empty-Your-Fridge/index.html",
     "main.9018f1a0.css.map": "/Empty-Your-Fridge/static/css/main.9018f1a0.css.map",
-    "main.b49950e7.js.map": "/Empty-Your-Fridge/static/js/main.b49950e7.js.map"
+    "main.e5ec0b75.js.map": "/Empty-Your-Fridge/static/js/main.e5ec0b75.js.map"
   },
   "entrypoints": [
     "static/css/main.9018f1a0.css",
-    "static/js/main.b49950e7.js"
+    "static/js/main.e5ec0b75.js"
   ]
 }
