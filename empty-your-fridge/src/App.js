@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="font-Montserrat">
       <header className="text-center">
-        <h1 className="font-bold text-3xl">Empty Your Fridge</h1>
+        <h1 className="font-bold text-4xl m-2">Empty Your Fridge</h1>
       </header>
       <main className="flex flex-col lg:flex-row gap-3 p-2 h-full">
         <IngredientProvider>
