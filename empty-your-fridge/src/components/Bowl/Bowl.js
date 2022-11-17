@@ -15,7 +15,7 @@ const Bowl = () => {
             <li
               key={ingredient}
               value={ingredient}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center md:w-[50px] lg:w-[100px]"
             >
               <p className="text-indigo-600">{ingredient.toLowerCase()}</p>{" "}
               <AiOutlineClose

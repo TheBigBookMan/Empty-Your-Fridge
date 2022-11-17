@@ -12,8 +12,9 @@ import Favourites from "./components/Favourites/Favourites";
 function App() {
   return (
     <div className="font-Montserrat">
-      <header className="text-center">
+      <header className=" flex flex-row justify-center items-center">
         <h1 className="font-bold text-4xl m-2">Empty Your Fridge</h1>
+        <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/null/external-plate-kitchen-kiranshastry-lineal-kiranshastry.png" />
       </header>
       <main className="flex flex-col lg:flex-row gap-3 p-2 h-full">
         <IngredientProvider>
