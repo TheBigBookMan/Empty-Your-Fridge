@@ -13,20 +13,18 @@ function App() {
       <header className="text-center">
         <h1 className="font-bold text-3xl">Empty Your Fridge</h1>
       </header>
-      <main className="flex flex-col gap-3 p-2 h-full">
+      <main className="flex flex-col lg:flex-row gap-3 p-2 h-full">
         <IngredientProvider>
           <RecipeProvider>
             <FavouriteProvider>
-              <div className="flex flex-col gap-3 md:flex-row ">
-                <Ingredients />
-
-                <Bowl />
+              <div className="flex flex-col md:flex-col gap-3">
+                <div className="flex flex-col gap-3 md:flex-row ">
+                  <Ingredients />
+                  <Bowl />
+                </div>
+                <Recipes />
               </div>
-              <Recipes />
-
-              <div className="">
-                <Favourites />
-              </div>
+              <Favourites />
             </FavouriteProvider>
           </RecipeProvider>
         </IngredientProvider>

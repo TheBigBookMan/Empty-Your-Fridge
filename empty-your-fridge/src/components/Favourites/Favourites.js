@@ -18,7 +18,7 @@ const Favourites = () => {
       {favourites.length === 0 ? (
         <div>No favourites yet...</div>
       ) : (
-        <ul className="flex flex-col gap-2 max-h-[200px] overflow-y-scroll">
+        <ul className="flex flex-col gap-2 max-h-[200px] lg:max-h-[750px] overflow-y-scroll">
           {favourites.map((recipe, index) => (
             <li
               key={recipe + index}
