@@ -14,7 +14,10 @@ function App() {
     <div className="font-Montserrat">
       <header className=" flex flex-row justify-center items-center">
         <h1 className="font-bold text-4xl m-2">Empty Your Fridge</h1>
-        <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/null/external-plate-kitchen-kiranshastry-lineal-kiranshastry.png" />
+        <img
+          src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/null/external-plate-kitchen-kiranshastry-lineal-kiranshastry.png"
+          alt="https://icons8.com/icon/tVAVrrDlITfS/plate"
+        />
       </header>
       <main className="flex flex-col lg:flex-row gap-3 p-2 h-full">
         <IngredientProvider>
