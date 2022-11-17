@@ -26,15 +26,20 @@ const Ingredients = () => {
 
   const handleInputChange = (e) => {
     e.preventDefault();
-    addIngredient(newIngredientInput.toLowerCase());
-    setNewIngredientInput("");
+    if (newIngredientInput === "") {
+      return;
+    } else if (ingredients.includes(newIngredientInput)) {
+      return;
+    } else {
+      addIngredient(newIngredientInput.toLowerCase());
+      setNewIngredientInput("");
+    }
   };
 
-  //! NEED TO MAKE SURE THAT USERS CANT INPUT EMPTY ""
-  //! MEED TP MAKE SURE USERS CANT PUT IN DOUBLE INGREDIENTS
   const handleIngredientInput = (e) => {
     const { target } = e;
     const inputValue = target.value;
+
     setNewIngredientInput(inputValue);
   };
 
