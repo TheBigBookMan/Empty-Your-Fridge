@@ -7,6 +7,8 @@ import Bowl from "./components/Bowl/Bowl";
 import Recipes from "./components/Recipes/Recipes";
 import Favourites from "./components/Favourites/Favourites";
 
+//TODO Create a cool logo for it just for extra style
+
 function App() {
   return (
     <div className="font-Montserrat">
