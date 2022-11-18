@@ -64,9 +64,9 @@ const Ingredients = () => {
   return (
     <div className="flex flex-col gap-3 md:w-5/6 lg:w-3/6 border-solid border-2 border-slate-200 rounded-md bg-slate-100 shadow-md p-5">
       <h3>
-        Type in the ingredient and click "Add Ingredient" to enter your
-        ingredient to the bowl. When ready, click on "Search Recipes" to view
-        all the yummy recipes that match your criteria!
+        Type in the ingredient and click "Add" to enter your ingredient to the
+        bowl. When ready, click on "Search Recipes" to view all the yummy
+        recipes that match your criteria!
       </h3>
       <form className="flex flex-col gap-3 border-solid border-2 border-slate-200 rounded-lg shadow-md bg-slate-200  p-5 h-[300px]">
         <input
@@ -81,7 +81,7 @@ const Ingredients = () => {
           type="submit"
           className="bg-slate-100 rounded-lg h-[40px] text-lg w-3/6 hover:bg-slate-600 hover:text-zinc-100 transition-all"
         >
-          <p className=" text-md">Add Ingredient</p>
+          <p className=" text-md">Add</p>
         </button>
 
         <select onChange={changeCuisine} className="h-[35px] rounded pl-1">
