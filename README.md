@@ -10,6 +10,8 @@ This app was built with Javascript, a third party API, TailwindCSS and create-re
 
 ## Functionality
 
+This application allows the user to select basic criteria for a specific type of food they are interested in making. The user can also select any ingredients that they wish to include (preferable ingredients they are keen to get rid of!) and then submitting the request. The EDAMAM food API will be called with the query selections and then a response with a list of items will be presented, with icons and titles. The user can then click on the url link and be taken to the website page that hosts the recipe for that item. The user can also select the favourite icon which will then store that item into the favourites section on the side. The user can access the url link to the hosted recipe website or also remove that item from the favourites list.
+
 ## Helped URL
 
 Food API: https://www.edamam.com/
